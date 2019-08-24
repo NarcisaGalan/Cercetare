@@ -6,7 +6,6 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "stat_functii", schema = "cercetare")
-@IdClass(StatFunctiiPK.class)
 public class StatFunctii {
     private int idContractTerti;
     private int idAngajat;

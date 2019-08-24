@@ -1,4 +1,4 @@
-package com.example.proiectcercertare.model;
+package com.example.proiectcercertare.domain.model;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;

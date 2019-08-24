@@ -1,30 +1,30 @@
-package com.example.proiectcercertare.model;
+package com.example.proiectcercertare.domain.model;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Objects;
 
 @Entity
-public class Incasare {
-    private int idIncasare;
+public class Cheltuiala {
+    private int idCheltuiala;
     private String nrDocument;
     private Date dataDocument;
     private String tipDocument;
-    private Double valoareIncasata;
+    private Double valoareCheltuiala;
     private Double valoareTva;
     private String moneda;
     private String explicatii;
-    private String incadrareIncasare;
+    private String incadrareCheltuiala;
     private ContractTerti contractTertiByIdContractTerti;
 
     @Id
-    @Column(name = "idIncasare")
-    public int getIdIncasare() {
-        return idIncasare;
+    @Column(name = "idCheltuiala")
+    public int getIdCheltuiala() {
+        return idCheltuiala;
     }
 
-    public void setIdIncasare(int idIncasare) {
-        this.idIncasare = idIncasare;
+    public void setIdCheltuiala(int idCheltuiala) {
+        this.idCheltuiala = idCheltuiala;
     }
 
     @Basic
@@ -58,13 +58,13 @@ public class Incasare {
     }
 
     @Basic
-    @Column(name = "Valoare_incasata")
-    public Double getValoareIncasata() {
-        return valoareIncasata;
+    @Column(name = "Valoare_cheltuiala")
+    public Double getValoareCheltuiala() {
+        return valoareCheltuiala;
     }
 
-    public void setValoareIncasata(Double valoareIncasata) {
-        this.valoareIncasata = valoareIncasata;
+    public void setValoareCheltuiala(Double valoareCheltuiala) {
+        this.valoareCheltuiala = valoareCheltuiala;
     }
 
     @Basic
@@ -98,34 +98,34 @@ public class Incasare {
     }
 
     @Basic
-    @Column(name = "Incadrare_incasare")
-    public String getIncadrareIncasare() {
-        return incadrareIncasare;
+    @Column(name = "Incadrare_cheltuiala")
+    public String getIncadrareCheltuiala() {
+        return incadrareCheltuiala;
     }
 
-    public void setIncadrareIncasare(String incadrareIncasare) {
-        this.incadrareIncasare = incadrareIncasare;
+    public void setIncadrareCheltuiala(String incadrareCheltuiala) {
+        this.incadrareCheltuiala = incadrareCheltuiala;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Incasare incasare = (Incasare) o;
-        return idIncasare == incasare.idIncasare &&
-                Objects.equals(nrDocument, incasare.nrDocument) &&
-                Objects.equals(dataDocument, incasare.dataDocument) &&
-                Objects.equals(tipDocument, incasare.tipDocument) &&
-                Objects.equals(valoareIncasata, incasare.valoareIncasata) &&
-                Objects.equals(valoareTva, incasare.valoareTva) &&
-                Objects.equals(moneda, incasare.moneda) &&
-                Objects.equals(explicatii, incasare.explicatii) &&
-                Objects.equals(incadrareIncasare, incasare.incadrareIncasare);
+        Cheltuiala that = (Cheltuiala) o;
+        return idCheltuiala == that.idCheltuiala &&
+                Objects.equals(nrDocument, that.nrDocument) &&
+                Objects.equals(dataDocument, that.dataDocument) &&
+                Objects.equals(tipDocument, that.tipDocument) &&
+                Objects.equals(valoareCheltuiala, that.valoareCheltuiala) &&
+                Objects.equals(valoareTva, that.valoareTva) &&
+                Objects.equals(moneda, that.moneda) &&
+                Objects.equals(explicatii, that.explicatii) &&
+                Objects.equals(incadrareCheltuiala, that.incadrareCheltuiala);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idIncasare, nrDocument, dataDocument, tipDocument, valoareIncasata, valoareTva, moneda, explicatii, incadrareIncasare);
+        return Objects.hash(idCheltuiala, nrDocument, dataDocument, tipDocument, valoareCheltuiala, valoareTva, moneda, explicatii, incadrareCheltuiala);
     }
 
     @ManyToOne
